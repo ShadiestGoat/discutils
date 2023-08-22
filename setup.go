@@ -14,7 +14,7 @@ type Options struct {
 }
 
 // Configure global embed options (and colors)
-func SetupEmbed(opts *Options) {
+func InitEmbed(opts *Options) {
 	if opts == nil {
 		opts = &Options{
 			ErrorEmbed: func(err string) *discordgo.MessageEmbed {
