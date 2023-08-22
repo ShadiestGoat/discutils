@@ -7,7 +7,7 @@ func SendMessage(s *discordgo.Session, channelID string, msg *discordgo.MessageS
 	if s == nil {
 		return nil, nil
 	}
-	
+
 	resp, err = s.ChannelMessageSendComplex(channelID, msg)
 	if err != nil {
 		return
