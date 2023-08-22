@@ -10,12 +10,12 @@ import (
 // It is best to run this after all the events & commands were registered, but before you open the connection
 func Init(s *discordgo.Session) {
 	s.AddHandler(handleInteraction)
-	s.AddHandler(MessageReactionAdd.handle)
-	s.AddHandler(MemberJoin.handle)
-	s.AddHandler(MessageReactionRemove.handle)
-	s.AddHandler(MessageCreate.handle)
-	s.AddHandler(MessageRemove.handle)
-	s.AddHandlerOnce(Ready.handle)
+	s.AddHandler(MessageReactionAdd.Handle)
+	s.AddHandler(MemberJoin.Handle)
+	s.AddHandler(MessageReactionRemove.Handle)
+	s.AddHandler(MessageCreate.Handle)
+	s.AddHandler(MessageRemove.Handle)
+	s.AddHandlerOnce(Ready.Handle)
 }
 
 func commandIsEqual(cmd1, cmd2 *discordgo.ApplicationCommand) bool {

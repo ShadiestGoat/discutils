@@ -8,7 +8,7 @@ type HandlerFunc[T any] func(s *discordgo.Session, v T) bool
 // If it returns true, no subsequent handlers will be called.
 type Handler[T any] []HandlerFunc[T]
 
-func (allHandlers Handler[T]) handle(s *discordgo.Session, v T) {
+func (allHandlers Handler[T]) Handle(s *discordgo.Session, v T) {
 	for _, h := range allHandlers {
 		r := h(s, v)
 		if r {
