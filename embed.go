@@ -10,6 +10,20 @@ var (
 	COLOR_DANGER  = 0xA51D2A
 )
 
+// A fully empty field that is inline
+var EmptyField = &discordgo.MessageEmbedField{
+	Name:   CHAR_ZWS,
+	Value:  CHAR_ZWS,
+	Inline: true,
+}
+
+// A fully empty field that is not inline
+var EmptyFieldNotInline = &discordgo.MessageEmbedField{
+	Name:   CHAR_ZWS,
+	Value:  CHAR_ZWS,
+	Inline: false,
+}
+
 var BaseEmbed = discordgo.MessageEmbed{
 	Title: CHAR_ZWS,
 	Color: COLOR_PRIMARY,
